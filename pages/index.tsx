@@ -5,7 +5,6 @@ import { GALLERY_DATA } from '../data/data';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
-  console.log(GALLERY_DATA);
   return (
     <div className={styles.all}>
       <Head>

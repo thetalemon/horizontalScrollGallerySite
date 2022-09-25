@@ -1,4 +1,15 @@
-export const GALLERY_DATA = [
+export type GalleryData = {
+  id: number;
+  title: string;
+  description: string;
+  text?: string;
+  link?: string;
+  img?: string;
+};
+
+export type GalleryDataList = GalleryData[];
+
+export const GALLERY_DATA: GalleryDataList = [
   {
     id: 1,
     title: 'art 1',
