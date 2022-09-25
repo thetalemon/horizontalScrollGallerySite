@@ -1,6 +1,9 @@
 import { GALLERY_DATA, GalleryData } from '../../data/data';
 import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'node:querystring';
+import Image from 'next/image';
+import styles from '../../styles/Specific.module.scss';
+import Footer from '../modules/footer';
 
 export interface Item {
   id: number;
@@ -43,11 +46,25 @@ export const getStaticPaths = async () => {
 
 const User: React.FC<Props> = ({ gallery }) => {
   return (
-    <>
-      <div className="wrapper">{gallery.title}</div>
-      <div className="wrapper">{gallery.description}</div>
-      <div className="wrapper">{gallery.text}</div>
-    </>
+    <div className={styles.all}>
+      <div className={styles.backToGallry}>
+        <a href="/">back to gallery</a>
+      </div>
+      <div className={styles.imageContainer} max-Width={250}>
+        <Image
+          src={gallery.img ?? '/art/sample/sample.png'}
+          alt="art"
+          width={250}
+          height={180}
+        />
+      </div>
+      <div>
+        <h2 className={styles.titleText}>{gallery.title}</h2>
+        <p className={styles.description}>{gallery.description}</p>
+        <div className={styles.mainText}>{gallery.text}</div>
+      </div>
+      <Footer />
+    </div>
   );
 };
 

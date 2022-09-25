@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { GALLERY_DATA } from '../data/data';
 import Image from 'next/image';
+import Footer from './modules/footer';
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
           {GALLERY_DATA.map((data) => {
             return (
               <a
+                key={data.id}
                 href={data.link ?? `/art/${data.id}`}
                 className={`${styles.card} ${styles.linkCard}`}
               >
@@ -39,15 +41,7 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://manasas.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ©︎ まなさす
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };
