@@ -28,8 +28,8 @@ const Home: NextPage = () => {
                   width={250}
                   height={180}
                 />
-                <h2>{data.title}</h2>
-                <p>{data.description}</p>
+                <h2 className={styles.titleText}>{data.title}</h2>
+                <p className={styles.description}>{data.description}</p>
               </a>
             );
           })}
