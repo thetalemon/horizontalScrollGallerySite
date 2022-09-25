@@ -11,7 +11,6 @@ export default function User({ gallery }) {
 }
 
 export const getStaticProps = async (context) => {
-  console.log(context);
   const id = Number(context.params.id);
   const gallery = GALLERY_DATA.filter((data) => data.id === id)[0];
 

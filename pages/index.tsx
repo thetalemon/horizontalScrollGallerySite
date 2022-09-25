@@ -7,16 +7,16 @@ import Image from 'next/image';
 const Home: NextPage = () => {
   console.log(GALLERY_DATA);
   return (
-    <div className={styles.container}>
+    <div className={styles.all}>
       <Head>
         <title>Gallery</title>
         <meta name="description" content="this is my gallery" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <div className={`${styles.card} ${styles.topCard}`}>
             <h2>title</h2>
             <p>description</p>
           </div>
@@ -38,8 +38,12 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a href="blank" target="_blank" rel="noopener noreferrer">
-          ©︎ kokonikaku
+        <a
+          href="https://manasas.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ©︎ まなさす
         </a>
       </footer>
     </div>
