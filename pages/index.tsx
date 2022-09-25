@@ -21,15 +21,18 @@ const Home: NextPage = () => {
           </div>
           {GALLERY_DATA.map((data) => {
             return (
-              <a href={data.link ?? `/art/${data.id}`} className={styles.card}>
+              <a
+                href={data.link ?? `/art/${data.id}`}
+                className={`${styles.card} ${styles.linkCard}`}
+              >
                 <Image
                   src={data.img ?? '/art/sample/sample.png'}
                   alt="art"
                   width={250}
                   height={180}
                 />
-                <h2>{data.title}</h2>
-                <p>{data.description}</p>
+                <h2 className={styles.titleText}>{data.title}</h2>
+                <p className={styles.description}>{data.description}</p>
               </a>
             );
           })}

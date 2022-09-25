@@ -1,6 +1,5 @@
 .all {
   display: flex;
-  padding: 2rem 0;
   flex-direction: column;
   justify-content: center;
   overflow-y: scroll;
@@ -9,7 +8,7 @@
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -28,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 80vh;
+  height: 90vh;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -37,36 +36,24 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   min-width: 300px;
-}
 
-.card img {
-  margin-bottom: 1rem;
-}
+  .titleText {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+  }
 
-.card:hover,
-.card:focus,
-.card:active {
-  opacity: 0.5;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.topCard {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  .description {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  &.linkCard {
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.5;
+    }
+  }
 }
 
 .logo {
@@ -77,7 +64,7 @@
 @media (max-width: 600px) {
   .grid {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
