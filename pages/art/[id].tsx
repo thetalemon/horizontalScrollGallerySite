@@ -1,10 +1,10 @@
-import { GALLERY_DATA, GalleryData } from '../../data/data';
+import { GALLERY_DATA, GalleryData } from '../../data/gallely';
 import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'node:querystring';
 import Image from 'next/image';
 import styles from '../../styles/Specific.module.scss';
 import Footer from '../modules/footer';
-
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 export interface Item {
   id: number;
 }
@@ -48,7 +48,10 @@ const User: React.FC<Props> = ({ gallery }) => {
   return (
     <div className={styles.all}>
       <div className={styles.backToGallry}>
-        <a href="/">back to gallery</a>
+        <a href="/">
+          <ChevronLeftIcon />
+          back to gallery
+        </a>
       </div>
       <div className={styles.imageContainer} max-Width={250}>
         <Image

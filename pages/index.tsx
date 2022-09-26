@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
-import { GALLERY_DATA } from '../data/data';
+import { GALLERY_DATA } from '../data/gallely';
+import { TOP_DATA } from '../data/top';
 import Image from 'next/image';
 import Footer from './modules/footer';
-
 const Home: NextPage = () => {
   return (
     <div className={styles.all}>
@@ -17,8 +17,8 @@ const Home: NextPage = () => {
       <main>
         <div className={styles.grid}>
           <div className={`${styles.card} ${styles.topCard}`}>
-            <h2>title</h2>
-            <p>description</p>
+            <h2>{TOP_DATA.title}</h2>
+            <p>{TOP_DATA.description}</p>
           </div>
           {GALLERY_DATA.map((data) => {
             return (
