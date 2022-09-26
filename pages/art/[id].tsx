@@ -1,4 +1,4 @@
-import { GALLERY_DATA, GalleryData } from '../../data/data';
+import { GALLERY_DATA, GalleryData } from '../../data/gallely';
 import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'node:querystring';
 import Image from 'next/image';
